@@ -116,9 +116,8 @@ def pregunta_03():
 
     # Defina un diccionario de parámetros para el GridSearchCV. Se deben
     # considerar valores desde 1 hasta 11 regresores para el modelo
-    param_grid = {"selectKBest__k":[1, 2, 3, 4, 5, 6, 7], 
-                  "linear_regression__normalize": [True, False],
-                  "linear_regression__fit_intercept": [True, False]
+    param_grid = {"linear_regression__normalize": [True, False],
+                  "linear_regression__fit_intercept": list(range(1,12))
                   
     }
 
